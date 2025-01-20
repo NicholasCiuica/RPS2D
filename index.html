@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>2D Rock Paper Scissors</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <canvas id="game"></canvas>
+  
+  <div id="info"></div>
+  <h1 id="winner"></h1>
+  
+  <div id="bottom-panel">
+    <div id="bottom-panel-toggle" class="Button"></div>
+    
+    <div id="pause-button" class="Button">
+      <span class="icon">⏸️</span>
+      <span class="label">Pause</span>
+      <span class="shortcut">Shift</span>
+    </div>
+    
+    <div id="reset-button" class="Button">
+      <span class="icon">🔄</span>
+      <span class="label">Reset</span>
+      <span class="shortcut">Space</span>
+    </div>
+    
+    <div id="theme-button" class="Button">
+      <span class="icon">🔀</span>
+      <span class="label">Switch Theme</span>
+      <span class="shortcut">Enter</span>
+    </div>
+    
+    <br>
+    <p>Current Updates per Second: <span id="ups"></span></p>
+    <input type="range" min="1" max="100" value="20" id="ups-slider">
+  </div>
+  
+  <script src="theme-data/color-data.js"></script>
+  <script src="theme-data/flower-data.js"></script>
+  <script src="theme-data/rps-data.js"></script>
+  <script src="cell.js"></script>
+  <script src="grid.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

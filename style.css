@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+  background-color: lightgray;
+}
+
+body {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' style='font-size: 3rem'><text y='50'>🤚</text></svg>") 18 10, auto;
+}
+
+/* Canvas Styles */
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Custom Button Class Styles */
+
+.Button {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' style='font-size: 3rem'><text y='50'>👆</text></svg>") 18 10, auto;
+  white-space: nowrap;
+  line-height: 1.5em;
+}
+
+.Button span.icon {
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.Button span.label {
+  text-decoration: underline;
+}
+
+.Button span.shortcut {
+  font-size: 0.5em;
+  color: #555;
+}
+
+.Button span.shortcut::before {
+  content: "(";
+}
+
+.Button span.shortcut::after {
+  content: ")";
+}
+
+.Button:link, .Button:visited {
+  color: black;
+}
+
+.Button:hover {
+  color: #555;
+}
+
+.Button:active {
+  color: #aaa;
+}
+
+/* Info Panel Styles */
+
+#info {
+  position: absolute;
+  margin: 1rem;
+  padding: 1.5rem;
+  width: 30rem;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  background-color: white;
+  font-size: 1.4rem;
+  box-shadow: 0 0 1rem black;
+}
+
+#info p {
+  padding-left: 3rem;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+#info .Button {
+  font-size: 2rem;
+}
+
+/* Winner Display Styles */
+
+h1 {
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+  font-size: 3.5rem;
+  padding: 1.5rem;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 0 1rem black;
+  transition: opacity 0.5s;
+}
+
+/* Bottom Panel Styles */
+
+#bottom-panel {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  padding: 1.5rem;
+  font-size: 1.7rem;
+  border: 1px solid gray;
+  background-color: white;
+  box-shadow: 0 0 1rem black;
+  transform: translateY(100%);
+  transition: transform 0.75s;
+}
+
+#bottom-panel .Button {
+  font-size: 2rem;
+}
+
+#bottom-panel #bottom-panel-toggle {
+  position: absolute;
+  font-size: 2.5rem;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 0 1rem black;
+  transform: translateY(calc(-100% - 3rem));
+  transition: transform 0.75s;
+  display: table;
+}
+
+#bottom-panel #bottom-panel-toggle::after {
+  display: table-cell;
+  content: '⬆️';
+  vertical-align: middle;
+  line-height: normal;
+}
+
+#ups-slider {
+  margin: auto;
+  width: 80%;
+}
